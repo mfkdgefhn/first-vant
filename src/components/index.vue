@@ -51,19 +51,6 @@
     </div>
 
     <!-- 影视列表 -->
-    <van-row type="flex"
-             justify="space-around">
-      <van-col span="6"><img src="../assets/images/s-1.jpg"
-             style="width:100%"
-             alt=""></van-col>
-      <van-col span="6"><img src="../assets/images/s-2.jpg"
-             style="width:100%"
-             alt=""></van-col>
-      <van-col span="6"><img src="../assets/images/s-3.jpg"
-             style="width:100%"
-             alt=""></van-col>
-    </van-row>
-
     <ul>
       <li v-for="item in items"
           :key="item.id">
@@ -198,10 +185,14 @@ export default {
 ul {
   width: 100%;
   display: flex;
+  margin: 0 auto;
 }
 ul li {
   flex: 0.33;
   margin: 5px;
+}
+ul li img {
+  border-radius: 5px;
 }
 </style>
 
