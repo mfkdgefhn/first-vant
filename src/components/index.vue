@@ -56,6 +56,12 @@
           :key="item.id">
         <img :src="item.img"
              style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
       </li>
     </ul>
   </div>
@@ -71,9 +77,9 @@ export default {
       icon: '\ue604  搜你想看',
       activeKey: 0,
       items: [
-        { id: 1, img: require('../assets/images/s-1.jpg') },
-        { id: 2, img: require('../assets/images/s-2.jpg') },
-        { id: 3, img: require('../assets/images/s-3.jpg') }
+        { id: 1, img: require('../assets/images/s-1.jpg'), title: '影片1', remarks: '影片详情信息' },
+        { id: 2, img: require('../assets/images/s-2.jpg'), title: '影片2', remarks: '影片详情信息' },
+        { id: 3, img: require('../assets/images/s-3.jpg'), title: '影片3', remarks: '影片详情信息' }
       ]
     }
   },
@@ -111,6 +117,9 @@ export default {
 </script>
 
 <style scoped>
+html {
+  font-size: 12px;
+}
 .ment {
   display: flex;
 }
@@ -186,13 +195,23 @@ ul {
   width: 100%;
   display: flex;
   margin: 0 auto;
+  border: 1px solid #000;
 }
 ul li {
-  flex: 0.33;
+  flex: 0.3333333;
   margin: 5px;
+  font-size: 12px;
+  text-align: left;
 }
 ul li img {
   border-radius: 5px;
+  height: 159px;
+}
+ul li span {
+  display: block;
+}
+.span-remarks {
+  color: rgba(44, 62, 80, 0.5);
 }
 </style>
 
