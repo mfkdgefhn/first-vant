@@ -64,8 +64,13 @@
              alt=""></van-col>
     </van-row>
 
-    <div></div>
-
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -77,7 +82,12 @@ export default {
     return {
       value: '',
       icon: '\ue604  搜你想看',
-      activeKey: 0
+      activeKey: 0,
+      items: [
+        { id: 1, img: require('../assets/images/s-1.jpg') },
+        { id: 2, img: require('../assets/images/s-2.jpg') },
+        { id: 3, img: require('../assets/images/s-3.jpg') }
+      ]
     }
   },
 
@@ -181,6 +191,17 @@ export default {
   font-size: 12px;
   font-weight: 500;
   line-height: 24px;
+}
+.van-col {
+  border: 1px solid #000;
+}
+ul {
+  width: 100%;
+  display: flex;
+}
+ul li {
+  flex: 0.33;
+  margin: 5px;
 }
 </style>
 
