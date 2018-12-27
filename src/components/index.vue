@@ -6,6 +6,8 @@
                  left-arrow
                  @click-left="onClickLeft"
                  @click-right="onClickRight" />
+    <van-notice-bar text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。"
+                    left-icon="volume-o" />
     <!-- 菜单 -->
     <div class="ment">
       <!-- 菜单左 -->
@@ -64,6 +66,292 @@
         </span>
       </li>
     </ul>
+
+    <hr class="separate">
+    <!-- 新鲜网络剧 -->
+    <div class="quote">
+      <span>新鲜网络剧</span>
+    </div>
+    <!-- 影视列表 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <hr class="separate">
+    <!-- 国剧正当时 -->
+    <div class="quote">
+      <span>国剧正当时</span>
+    </div>
+    <!-- 影视列表 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <hr class="separate">
+    <!-- 港台值得追 -->
+    <div class="quote">
+      <span>港台值得追</span>
+    </div>
+    <!-- 影视列表 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <hr class="separate">
+    <!-- 私享片单 -->
+    <div class="quote">
+      <span>私享片单</span>
+    </div>
+    <!-- 影视列表 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <hr class="separate">
+    <!-- 国产电影 -->
+    <div class="quote">
+      <span>国产电影</span>
+    </div>
+    <!-- 影视列表 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <hr class="separate">
+    <!-- 国产综艺 -->
+    <div class="quote">
+      <span>国产综艺</span>
+    </div>
+    <!-- 影视列表 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <hr class="separate">
+    <!-- 仙侠玄幻 -->
+    <div class="quote">
+      <span>仙侠玄幻</span>
+    </div>
+    <!-- 影视列表 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <hr class="separate">
+    <!-- 虐恋情深 -->
+    <div class="quote">
+      <span>虐恋情深</span>
+    </div>
+    <!-- 影视列表 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <hr class="separate">
+    <!-- 甜蜜互宠 -->
+    <div class="quote">
+      <span>甜蜜互宠</span>
+    </div>
+    <!-- 影视列表 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <hr class="separate">
+    <!-- 悬疑推理 -->
+    <div class="quote">
+      <span>悬疑推理</span>
+    </div>
+    <!-- 影视列表 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <hr class="separate">
+    <!-- 青涩校园 -->
+    <div class="quote">
+      <span>青涩校园</span>
+    </div>
+    <!-- 影视列表 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <hr class="separate">
+    <!-- 都市职场 -->
+    <div class="quote">
+      <span>青涩校园</span>
+    </div>
+    <!-- 都市职场 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <hr class="separate">
+    <!-- 宫廷斗争 -->
+    <div class="quote">
+      <span>宫廷斗争</span>
+    </div>
+    <!-- 都市职场 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <hr class="separate">
+    <!-- 快意江湖 -->
+    <div class="quote">
+      <span>快意江湖</span>
+    </div>
+    <!-- 都市职场 -->
+    <ul>
+      <li v-for="item in items"
+          :key="item.id">
+        <img :src="item.img"
+             style="width:100%;" />
+        <span>
+          {{item.title}}
+        </span>
+        <span class="span-remarks">
+          {{item.remarks}}
+        </span>
+      </li>
+    </ul>
+
+    <!-- 底部 -->
+    <van-tabbar v-model="active">
+      <van-tabbar-item :icon="tabbar.icon"
+                       :info="tabbar.info==='0'?dot : tabbar.info">{{tabbar.title}}</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
@@ -80,6 +368,13 @@ export default {
         { id: 1, img: require('../assets/images/s-1.jpg'), title: '影片1', remarks: '影片详情信息' },
         { id: 2, img: require('../assets/images/s-2.jpg'), title: '影片2', remarks: '影片详情信息' },
         { id: 3, img: require('../assets/images/s-3.jpg'), title: '影片3', remarks: '影片详情信息' }
+      ],
+      active: 0,
+      tabbar: [
+        { icon: 'home-o', info: '0', title: '首页' },
+        { icon: 'search', info: '0', title: '搜索' },
+        { icon: 'freinds-o', info: '5', title: '通知' },
+        { icon: 'setting-o', info: '20', title: '设置' }
       ]
     }
   },
@@ -120,6 +415,9 @@ export default {
 html {
   font-size: 12px;
 }
+.van-notice-bar {
+  height: 18px;
+}
 .ment {
   display: flex;
 }
@@ -136,6 +434,7 @@ html {
 }
 .select {
   display: flex;
+  margin-top: 2px;
 }
 .van-search {
   flex: 0.8;
@@ -195,7 +494,7 @@ ul {
   width: 100%;
   display: flex;
   margin: 0 auto;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 ul li {
   flex: 0.3333333;
