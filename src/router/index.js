@@ -13,27 +13,23 @@ export default new Router({
     {
       path: '/',
       name: 'index',
-      component: Index
-    },
-    {
-      path: '/tv',
-      name: 'TV',
-      component: TV
-    },
-    {
-      path: '/game',
-      name: 'game',
-      component: game
-    },
-    {
-      path: '/novel',
-      name: 'novel',
-      component: novel
-    },
-    {
-      path: '/user',
-      name: 'user',
-      component: user
+      component: Index,
+      children: [
+        {
+          path: 'tv',
+          component: TV
+        }, {
+          path: 'game',
+          component: game
+        }, {
+          path: 'novel',
+          component: novel
+        }, {
+          path: 'user',
+          component: user
+        }
+      ]
     }
+
   ]
 })
