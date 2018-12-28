@@ -160,10 +160,10 @@ export default {
 
 <style lang="scss" scoped>
 .van-notice-bar {
-  height: 18px;
+  height: 1.125rem;
 }
 .content {
-  margin-bottom: 4.16667rem;
+  margin-bottom: 3.125rem;
 }
 .ment {
   display: flex;
@@ -174,86 +174,86 @@ export default {
 .ment-right {
   flex: 0.1;
   text-align: center;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 .points {
-  line-height: 44px;
+  line-height: 2.75rem;
   font-weight: 600;
 }
 .select {
   display: flex;
-  margin-top: 2px;
+  margin-top: 0.125rem;
 }
 .van-search {
   flex: 0.8;
   padding: 0;
-  /* border: 1px solid #000; */
+  // border: 0.0625rem solid #000;
 }
 .van-search .van-cell {
-  /* border-radius: 22px; */
+  // border-radius: 1.375rem;
   padding: 0;
   background: rgb(158, 158, 158);
 }
 .search-right {
   flex: 0.2;
   background: #f1f4f8;
-  border-radius: 22px;
-  height: 24px;
-  margin: 3px 0px;
-  margin-right: 8px;
+  border-radius: 1.375rem;
+  height: 1.5rem;
+  margin: 0.1875rem 0rem;
+  margin-right: 0.5rem;
 }
 .search-right span {
   color: #969799;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 #select-search {
-  border: 1px solid #000;
+  border: 0.0625rem solid #000;
 }
 .van-swipe {
-  margin-top: 10px;
-  height: 180px;
+  margin-top: 0.625rem;
+  height: 11.25rem;
 }
 .van-row {
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 .separate {
   margin: 0;
-  border: 0px;
-  height: 10px;
+  border: 0rem;
+  height: 0.625rem;
   background: #f1f4f8;
 }
 .quote {
-  height: 24px;
-  border-left: 3px solid #ff4444;
+  height: 1.5rem;
+  border-left: 0.1875rem solid #ff4444;
   text-align: left;
-  padding: 0 0 0 10px;
+  padding: 0 0 0 0.625rem;
 }
 .quote span {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 .van-col {
-  border: 1px solid #000;
+  border: 0.0625rem solid #000;
 }
 ul {
   width: 100%;
   display: flex;
   margin: 0 auto;
-  /* border: 1px solid #000; */
+  // border: .0625rem solid #000;
 }
 ul li {
   flex: 0.3333333;
-  margin: 5px;
-  font-size: 12px;
+  margin: 0.3125rem;
+  font-size: 0.75rem;
   text-align: left;
 }
 ul li img {
-  border-radius: 5px;
-  height: 159px;
+  border-radius: 0.3125rem;
+  height: 9.9375rem;
 }
 ul li span {
   display: block;
@@ -273,7 +273,7 @@ ul li span {
 <style>
 #select-search {
   background: #f1f4f8;
-  border-radius: 22px;
+  border-radius: 1.375rem;
   font-family: "iconfont";
 }
 .van-search .van-cell__left-icon {
