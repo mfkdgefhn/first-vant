@@ -5,6 +5,7 @@ import TV from '@/view/tv.vue'
 import game from '@/view/game.vue'
 import novel from '@/view/novel.vue'
 import user from '@/view/user.vue'
+import home from '@/view/home.vue'
 
 Vue.use(Router)
 
@@ -27,6 +28,9 @@ export default new Router({
         }, {
           path: 'user',
           component: user
+        }, {
+          path: 'home',
+          component: home
         }
       ]
     }
