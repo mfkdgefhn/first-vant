@@ -60,7 +60,20 @@ exports.cssLoaders = function (options) {
     postcss: generateLoaders(),
     less: generateLoaders('less'),
     sass: generateLoaders('sass', { indentedSyntax: true }),
-    scss: generateLoaders('sass'),
+    // scss: generateLoaders('sass'),
+    scss: generateLoaders('sass').concat(
+      {
+        loader: 'sass-resources-loader',
+        options: {
+          resources: path.resolve(__dirname, '../src/assets/scss/px2rem.scss')  //注意自己的路径
+        }
+      }
+    ),
+    //默认
+    // sass: generateLoaders('sass', { indentedSyntax: true }),
+    //.vue文件相对于base.scss文件，所以结构相对统一时用处更大喽~
+    // scss: generateLoaders('sass', { data: '@import "../assets/scss/base";' }),
+
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   }

@@ -5,11 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>vuevant1</title>
-  <style>
-    html {
-      font-size: 16px;
-    }
-  </style>
+  <script>
+    // 取得屏幕高度
+    var devicewidth = document.documentElement.clientWidth || document.body.clientWidth
+    // 动态设置 html font-size值
+    document.getElementsByTagName('html')[0].style.fontSize = devicewidth / 10 + 'px'
+
+  </script>
 </head>
 
 <body>

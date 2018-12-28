@@ -5,7 +5,9 @@ import App from './App'
 import router from './router'
 import store from './store/store'
 
-import '../config/rem'
+// import '../config/rem'
+
+// import './common/px2rem'
 
 // vnat-ui组件库
 import Vant from 'vant'
