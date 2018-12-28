@@ -50,10 +50,13 @@ export default new Vuex.Store({
     ],
     // 底部菜单
     tabbars: [
-      { id: 1, icon: 'home-o', info: '0', title: '首页' },
-      { id: 2, icon: 'search', info: '0', title: '搜索' },
-      { id: 3, icon: 'freinds-o', info: '5', title: '通知' },
-      { id: 4, icon: 'setting-o', info: '20', title: '设置' }
+      { id: 1, icon: 'shouye', info: '0', title: '首页', to: '/' },
+      { id: 2, icon: 'dianshiju', info: '0', title: '追剧', to: '/TV' },
+      // { id: 3, icon: require('../assets/images/youxi.png'), info: '5', title: '游戏' },
+      { id: 3, icon: 'youxi', info: '5', title: '游戏', to: '/game' },
+      { id: 4, icon: 'xiaoshuo', info: '20', title: '小说', to: '/novel' },
+      { id: 5, icon: 'wode', info: '20', title: '我的', to: '/user' }
+
     ]
   }
   // mutations: {

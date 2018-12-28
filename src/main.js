@@ -4,7 +4,6 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store/store'
-
 // import '../config/rem'
 
 // import './common/px2rem'

@@ -1,11 +1,14 @@
 <template>
   <div>
+    <!-- 头部 -->
     <van-nav-bar title="纸鹤视界"
                  left-text="返回"
                  right-text="按钮"
                  left-arrow
                  @click-left="onClickLeft"
                  @click-right="onClickRight" />
+
+    <!-- 公告 -->
     <van-notice-bar text="这个是公告，目前就是一个公告。"
                     left-icon="volume-o"
                     v-if="newshow" />
@@ -13,6 +16,7 @@
     <!-- 菜单 -->
     <div class="ment"
          id='ment'
+         ref="reference"
          :class="searchBarFixed === true ? 'isFixed':''">
       <!-- 菜单左 -->
       <van-tabs class="ment-left">
@@ -80,8 +84,15 @@
       <van-tabbar-item v-for="item in tabbars"
                        :key="item.id"
                        :icon="item.icon"
-                       :info="item.info==='0'? '' : item.info">{{item.title}}</van-tabbar-item>
+                       :to="item.to"
+                       :info="item.info==='0'? '' : item.info">{{item.title}}
+        <div slot="icon">
+          <van-icon class-prefix="iconfont"
+                    :name="item.icon" />
+        </div>
+      </van-tabbar-item>
     </van-tabbar>
+
   </div>
 </template>
 
@@ -109,12 +120,18 @@ export default {
   methods: {
     // 如果滚运条大于顶部菜单，则将置顶标识searchBarFixed设为true
     handleScroll () {
+      if (this.orderScroll === 0) {
+        this.orderScroll = this.$refs.reference.offsetTop
+      }
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-      var offsetTop = document.querySelector('#ment').offsetTop
-      // console.log(scrollTop, offsetTop)
-      if (scrollTop > offsetTop) {
+      // var offsetTop = document.querySelector('#ment').offsetTop
+      // var offsetTop = this.$refs.reference.offsetTop
+      // console.log(offsetTop)
+      // offsetTop
+      if (scrollTop > this.orderScroll) {
         this.searchBarFixed = true
       } else {
+        // console.log(scrollTop + ',' + offsetTop)
         this.searchBarFixed = false
       }
     },
@@ -136,18 +153,23 @@ export default {
     }
   },
   computed: {
+    // 头部菜单
     navs () {
       return this.$store.state.navs
     },
+    // 幻灯片
     imagesH () {
       return this.$store.state.imagesH
     },
+    // 影片列表
     imagesS () {
       return this.$store.state.imagesS
     },
+    // 影片列表
     viders () {
       return this.$store.state.viders
     },
+    // 底部菜单
     tabbars () {
       return this.$store.state.tabbars
     }
@@ -159,6 +181,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.iconfont {
+  font-size: 1.125rem;
+}
 .van-notice-bar {
   height: 1.125rem;
 }
