@@ -7,7 +7,8 @@
                  @click-left="onClickLeft"
                  @click-right="onClickRight" />
     <van-notice-bar text="这个是公告，目前就是一个公告。"
-                    left-icon="volume-o" />
+                    left-icon="volume-o"
+                    v-if="newshow" />
 
     <!-- 菜单 -->
     <div class="ment"
@@ -95,7 +96,8 @@ export default {
       icon: '\ue604  搜你想看',
       activeKey: 0,
       active: 0,
-      orderScroll: 0
+      orderScroll: 0,
+      newshow: true
     }
   },
 

@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import store from './store/store'
 
+import '../config/rem'
+
 // vnat-ui组件库
 import Vant from 'vant'
 import 'vant/lib/icon/local.css'
