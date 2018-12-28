@@ -1,4 +1,4 @@
 @function px2rem($px){
-  $rem:41.4px;
+  $rem:12px;
   @return ($px/$rem)+rem;
 }

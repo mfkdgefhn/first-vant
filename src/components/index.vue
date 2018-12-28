@@ -158,12 +158,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .van-notice-bar {
   height: 18px;
 }
 .content {
-  margin-bottom: 50px;
+  margin-bottom: 4.16667rem;
 }
 .ment {
   display: flex;
