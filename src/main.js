@@ -3,13 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Vant from 'vant'
 import store from './store/store'
 
+// vnat-ui组件库
+import Vant from 'vant'
 import 'vant/lib/icon/local.css'
 import 'vant/lib/index.css'
+
+// 字体
 import './assets/iconfont/iconfont.css'
-// import './assets/css/swiper.css'
 
 Vue.use(Vant)
 
