@@ -6,7 +6,7 @@
                  left-arrow
                  @click-left="onClickLeft"
                  @click-right="onClickRight" />
-    <van-notice-bar text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。"
+    <van-notice-bar text="这个是公告，目前就是一个公告。"
                     left-icon="volume-o" />
 
     <!-- 菜单 -->
@@ -48,316 +48,38 @@
       </van-swipe-item>
     </van-swipe>
 
-    <hr class="separate">
-
+    <!-- 影视列表 -->
     <div class="content">
-      <!-- 全网热播 -->
-      <div class="quote">
-        <span>全网热播</span>
+      <div v-for="vider in viders"
+           :key="vider.id">
+        <!-- 换行 -->
+        <hr class="separate">
+        <!-- 全网热播 -->
+        <div class="quote">
+          <span>{{vider.title}}</span>
+        </div>
+        <ul>
+          <li v-for="item in imagesS"
+              :key="item.id">
+            <img :src="item.img"
+                 style="width:100%;" />
+            <span>
+              {{item.title}}
+            </span>
+            <span class="span-remarks">
+              {{item.remarks}}
+            </span>
+          </li>
+        </ul>
       </div>
-
-      <!-- 影视列表 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 新鲜网络剧 -->
-      <div class="quote">
-        <span>新鲜网络剧</span>
-      </div>
-      <!-- 影视列表 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 国剧正当时 -->
-      <div class="quote">
-        <span>国剧正当时</span>
-      </div>
-      <!-- 影视列表 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 港台值得追 -->
-      <div class="quote">
-        <span>港台值得追</span>
-      </div>
-      <!-- 影视列表 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 私享片单 -->
-      <div class="quote">
-        <span>私享片单</span>
-      </div>
-      <!-- 影视列表 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 国产电影 -->
-      <div class="quote">
-        <span>国产电影</span>
-      </div>
-      <!-- 影视列表 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 国产综艺 -->
-      <div class="quote">
-        <span>国产综艺</span>
-      </div>
-      <!-- 影视列表 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 仙侠玄幻 -->
-      <div class="quote">
-        <span>仙侠玄幻</span>
-      </div>
-      <!-- 影视列表 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 虐恋情深 -->
-      <div class="quote">
-        <span>虐恋情深</span>
-      </div>
-      <!-- 影视列表 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 甜蜜互宠 -->
-      <div class="quote">
-        <span>甜蜜互宠</span>
-      </div>
-      <!-- 影视列表 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 悬疑推理 -->
-      <div class="quote">
-        <span>悬疑推理</span>
-      </div>
-      <!-- 影视列表 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 青涩校园 -->
-      <div class="quote">
-        <span>青涩校园</span>
-      </div>
-      <!-- 影视列表 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 都市职场 -->
-      <div class="quote">
-        <span>青涩校园</span>
-      </div>
-      <!-- 都市职场 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 宫廷斗争 -->
-      <div class="quote">
-        <span>宫廷斗争</span>
-      </div>
-      <!-- 都市职场 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
-
-      <hr class="separate">
-      <!-- 快意江湖 -->
-      <div class="quote">
-        <span>快意江湖</span>
-      </div>
-      <!-- 都市职场 -->
-      <ul>
-        <li v-for="item in imagesS"
-            :key="item.id">
-          <img :src="item.img"
-               style="width:100%;" />
-          <span>
-            {{item.title}}
-          </span>
-          <span class="span-remarks">
-            {{item.remarks}}
-          </span>
-        </li>
-      </ul>
     </div>
 
     <!-- 底部 -->
     <van-tabbar v-model="active">
-      <van-tabbar-item v-for="item in tabbar"
+      <van-tabbar-item v-for="item in tabbars"
                        :key="item.id"
                        :icon="item.icon"
-                       :info="tabbar.info==='0'? dot : tabbar.info">{{item.title}}</van-tabbar-item>
+                       :info="item.info==='0'? '' : item.info">{{item.title}}</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
@@ -372,31 +94,22 @@ export default {
       searchBarFixed: false,
       icon: '\ue604  搜你想看',
       activeKey: 0,
-      items: [
-        { id: 1, img: require('../assets/images/s-1.jpg'), title: '影片1', remarks: '影片详情信息' },
-        { id: 2, img: require('../assets/images/s-2.jpg'), title: '影片2', remarks: '影片详情信息' },
-        { id: 3, img: require('../assets/images/s-3.jpg'), title: '影片3', remarks: '影片详情信息' }
-      ],
       active: 0,
-      tabbar: [
-        { id: 1, icon: 'home-o', info: '0', title: '首页' },
-        { id: 2, icon: 'search', info: '0', title: '搜索' },
-        { id: 3, icon: 'freinds-o', info: '5', title: '通知' },
-        { id: 4, icon: 'setting-o', info: '20', title: '设置' }
-      ],
       orderScroll: 0
     }
   },
 
   mounted () {
+    // 页面加载好后，监听滚动事件
     window.addEventListener('scroll', this.handleScroll)
   },
+
   methods: {
+    // 如果滚运条大于顶部菜单，则将置顶标识searchBarFixed设为true
     handleScroll () {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-
       var offsetTop = document.querySelector('#ment').offsetTop
-      console.log(scrollTop, offsetTop)
+      // console.log(scrollTop, offsetTop)
       if (scrollTop > offsetTop) {
         this.searchBarFixed = true
       } else {
@@ -429,6 +142,12 @@ export default {
     },
     imagesS () {
       return this.$store.state.imagesS
+    },
+    viders () {
+      return this.$store.state.viders
+    },
+    tabbars () {
+      return this.$store.state.tabbars
     }
   },
   watch: {
