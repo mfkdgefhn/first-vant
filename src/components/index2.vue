@@ -159,6 +159,10 @@ export default {
 </script>
 
 <style scoped>
+html {
+  font-size: 12px;
+}
+
 .van-notice-bar {
   height: 18px;
 }
