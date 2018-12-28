@@ -165,6 +165,7 @@ export default {
 .content {
   margin-bottom: 3.125rem;
 }
+
 .ment {
   display: flex;
 }
