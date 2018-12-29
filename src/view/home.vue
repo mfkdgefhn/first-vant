@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="home">
     <!-- 公告 -->
     <van-notice-bar text="这个是公告，目前就是一个公告。"
                     left-icon="volume-o"
