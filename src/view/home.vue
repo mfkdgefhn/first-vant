@@ -1,5 +1,9 @@
 <template>
   <div>
+    <!-- 公告 -->
+    <van-notice-bar text="这个是公告，目前就是一个公告。"
+                    left-icon="volume-o"
+                    v-if="newshow" />
     <!-- 菜单 -->
     <div class="ment"
          id='ment'
@@ -75,6 +79,7 @@ export default {
       value: '',
       searchBarFixed: false,
       icon: '\ue604  搜你想看',
+      newshow: true,
       orderScroll: 0
     }
   },
