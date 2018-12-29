@@ -129,6 +129,9 @@ export default {
 .content {
   margin-bottom: 3.125rem;
 }
+.van-notice-bar {
+  height: 1.5rem;
+}
 .ment {
   display: flex;
 }

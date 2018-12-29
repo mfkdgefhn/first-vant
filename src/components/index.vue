@@ -85,9 +85,6 @@ export default {
 .iconfont {
   font-size: 1.125rem;
 }
-.van-notice-bar {
-  height: 1.125rem;
-}
 </style>
 
 <style>
@@ -95,7 +92,7 @@ export default {
   position: absolute;
   width: 100%;
   transition: all 0.8s ease;
-  top: 40px;
+  top: 2.875rem;
 }
 
 .slide-left-enter,
@@ -110,5 +107,8 @@ export default {
   opacity: 0;
   -webkit-transform: translate(-100%, 0);
   transform: translate(-100% 0);
+}
+.van-tabbar {
+  z-index: 999;
 }
 </style>

@@ -57,10 +57,15 @@ export default new Vuex.Store({
       { id: 4, icon: 'xiaoshuo', info: '0', title: '小说', to: '/novel' },
       { id: 5, icon: 'wode', info: '0', title: '我的', to: '/user' }
 
-    ]
+    ],
+    states: 'turn-on'
+  },
+  mutations: {
+    increment: state => state.count++,
+    decrement: state => state.count--,
+
+    setTransistion (state, states) {
+      state.states = states
+    }
   }
-  // mutations: {
-  //   increment: state => state.count++,
-  //   decrement: state => state.count--
-  // }
 })
