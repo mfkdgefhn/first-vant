@@ -13,7 +13,10 @@
                     left-icon="volume-o"
                     v-if="newshow" />
 
-    <router-view></router-view>
+    <!-- 过渡动画 -->
+    <transition :name="transitionName">
+      <router-view></router-view>
+    </transition>
 
     <!-- 菜单 -->
     <div class="ment"

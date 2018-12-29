@@ -2,10 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/components/index'
 import TV from '@/view/tv.vue'
-import game from '@/view/game.vue'
-import novel from '@/view/novel.vue'
-import user from '@/view/user.vue'
-import home from '@/view/home.vue'
+import Game from '@/view/game.vue'
+import Novel from '@/view/novel.vue'
+import User from '@/view/user.vue'
+import Home from '@/view/home.vue'
 
 Vue.use(Router)
 
@@ -21,16 +21,16 @@ export default new Router({
           component: TV
         }, {
           path: 'game',
-          component: game
+          component: Game
         }, {
           path: 'novel',
-          component: novel
+          component: Novel
         }, {
           path: 'user',
-          component: user
+          component: User
         }, {
           path: 'home',
-          component: home
+          component: Home
         }
       ]
     }

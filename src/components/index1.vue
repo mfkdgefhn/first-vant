@@ -13,6 +13,8 @@
                     left-icon="volume-o"
                     v-if="newshow" />
 
+    <router-view></router-view>
+
     <!-- 菜单 -->
     <div class="ment"
          id='ment'
@@ -78,8 +80,6 @@
         </ul>
       </div>
     </div>
-
-    <router-view></router-view>
 
     <!-- 底部 -->
     <van-tabbar v-model="active">
