@@ -9,9 +9,11 @@
                  @click-right="onClickRight" />
 
     <!-- 过渡动画 -->
-    <transition :name="transitionName">
-      <router-view class="Router"></router-view>
-    </transition>
+    <!-- <transition :name="$store.state.states"> -->
+    <keep-alive>
+      <router-view />
+    </keep-alive>
+    <!-- </transition> -->
 
     <!-- 底部 -->
     <van-tabbar v-model="active">
@@ -31,12 +33,13 @@
 </template>
 
 <script>
+
 export default {
   data () {
     return {
       activeKey: 0,
-      active: 0,
-      transitionName: 'slide-right' // 默认动态路由变化为slide-right
+      active: 0
+      // transitionName: 'slide-right' // 默认动态路由变化为slide-right
     }
   },
   methods: {
@@ -53,6 +56,9 @@ export default {
         alert('你输入了' + this.value)
       }
     }
+    // clickLink () {
+    //   this.$store.commit('setTransition', 'turn-on')
+    // }
   },
   computed: {
     // 底部菜单
@@ -72,11 +78,21 @@ export default {
   //   }
   // }
   watch: {
-    '$route' (to, from) {
-      const toDepth = to.path.split('/').length
-      const fromDepth = from.path.split('/').length
-      this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
-    }
+    // '$route' (to, from) {
+    //   const toDepth = to.path.split('/').length
+    //   const fromDepth = from.path.split('/').length
+    //   this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+    // }
+  },
+  mounted () {
+    var _this = this
+    window.addEventListener(
+      'popstate',
+      function (e) {
+        _this.$store.commit('setTransition', 'turn-off')
+      },
+      false
+    )
   }
 }
 </script>
@@ -94,21 +110,27 @@ export default {
   transition: all 0.8s ease;
   top: 2.875rem;
 }
-
-.slide-left-enter,
-.slide-right-leave-active {
-  opacity: 0;
-  -webkit-transform: translate(100%, 0);
-  transform: translate(100%, 0);
+.turn-on-enter {
+  transform: translate3d(100%, 0, 0);
 }
-
-.slide-left-leave-active,
-.slide-right-enter {
-  opacity: 0;
-  -webkit-transform: translate(-100%, 0);
-  transform: translate(-100% 0);
+/* .turn-on-leave-to {
+  transform: translate3d(-20%, 0, 0);
+} */
+.turn-on-enter-active,
+.turn-on-leave-active {
+  transition: transform 0.4s ease;
 }
-.van-tabbar {
-  z-index: 999;
+/* .turn-off-enter {
+   transform: translate3d(-20%, 0, 0);
+} */
+.turn-off-leave-to {
+  transform: translate3d(100%, 0, 0);
+}
+.turn-off-enter-active,
+.turn-off-leave-active {
+  transition: transform 0.4s ease;
+}
+.turn-off-leave-active {
+  z-index: -2;
 }
 </style>

@@ -61,8 +61,6 @@ export default new Vuex.Store({
     states: 'turn-on'
   },
   mutations: {
-    increment: state => state.count++,
-    decrement: state => state.count--,
 
     setTransistion (state, states) {
       state.states = states
