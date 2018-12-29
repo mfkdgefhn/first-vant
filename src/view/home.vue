@@ -84,6 +84,12 @@ export default {
     }
   },
   mounted () {
+    // 10秒后自动关闭公告
+    let _this = this
+    setTimeout(function () {
+      _this.newshow = false
+    }, 10000)
+
     // 页面加载好后，监听滚动事件
     window.addEventListener('scroll', this.handleScroll)
   },
