@@ -10,7 +10,13 @@ import Home from '@/view/home.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
+    {
+      path: '/',
+      redirect: '/home',
+      name: '主页'
+    },
     {
       path: '/',
       name: 'index',
