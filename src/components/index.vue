@@ -60,15 +60,22 @@ export default {
       return this.$store.state.tabbars
     }
   },
+  // watch: {
+  //   '$route' (to, from) {
+  //     let isBack = this.$router.isBack //  监听路由变化时的状态为前进还是后退
+  //     if (isBack) {
+  //       this.transitionName = 'slide-right'
+  //     } else {
+  //       this.transitionName = 'slide-left'
+  //     }
+  //     this.$router.isBack = false
+  //   }
+  // }
   watch: {
     '$route' (to, from) {
-      let isBack = this.$router.isBack //  监听路由变化时的状态为前进还是后退
-      if (isBack) {
-        this.transitionName = 'slide-right'
-      } else {
-        this.transitionName = 'slide-left'
-      }
-      this.$router.isBack = false
+      const toDepth = to.path.split('/').length
+      const fromDepth = from.path.split('/').length
+      this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
     }
   }
 }
