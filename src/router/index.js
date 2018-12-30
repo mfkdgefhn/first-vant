@@ -47,12 +47,6 @@ export default new Router({
             }, {
               path: 'film',
               component: Film
-            }, {
-              path: 'hot',
-              component: Hot
-            }, {
-              path: 'hot',
-              component: Hot
             }
           ]
         }
