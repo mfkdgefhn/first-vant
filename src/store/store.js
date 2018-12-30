@@ -56,7 +56,14 @@ export default new Vuex.Store({
       { id: 3, icon: 'youxi', info: '0', title: '游戏', to: '/game' },
       { id: 4, icon: 'xiaoshuo', info: '0', title: '小说', to: '/novel' },
       { id: 5, icon: 'wode', info: '0', title: '我的', to: '/user' }
+    ],
 
+    // 用户
+    users: [
+      { id: 1, icon: 'jilu', name: '观看记录', iconright: 'arrow' },
+      { id: 2, icon: 'fankui', name: '用户反馈', iconright: 'arrow' },
+      { id: 3, icon: 'touping', name: '投屏教程', iconright: 'arrow' },
+      { id: 4, icon: 'falvshengming', name: '免责声明', iconright: 'arrow' }
     ],
     states: 'turn-on'
   },

@@ -78,21 +78,10 @@ export default {
   //   }
   // }
   watch: {
-    // '$route' (to, from) {
-    //   const toDepth = to.path.split('/').length
-    //   const fromDepth = from.path.split('/').length
-    //   this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
-    // }
+
   },
   mounted () {
-    var _this = this
-    window.addEventListener(
-      'popstate',
-      function (e) {
-        _this.$store.commit('setTransition', 'turn-off')
-      },
-      false
-    )
+
   }
 }
 </script>
@@ -109,28 +98,5 @@ export default {
   width: 100%;
   transition: all 0.8s ease;
   top: 2.875rem;
-}
-.turn-on-enter {
-  transform: translate3d(100%, 0, 0);
-}
-/* .turn-on-leave-to {
-  transform: translate3d(-20%, 0, 0);
-} */
-.turn-on-enter-active,
-.turn-on-leave-active {
-  transition: transform 0.4s ease;
-}
-/* .turn-off-enter {
-   transform: translate3d(-20%, 0, 0);
-} */
-.turn-off-leave-to {
-  transform: translate3d(100%, 0, 0);
-}
-.turn-off-enter-active,
-.turn-off-leave-active {
-  transition: transform 0.4s ease;
-}
-.turn-off-leave-active {
-  z-index: -2;
 }
 </style>
