@@ -39,12 +39,12 @@
       <ul>
         <li v-for="item in users"
             :key="item.id">
-
           <van-icon class-prefix="iconfont"
-                    :name="item.icon" />
+                    :name="item.icon"
+                    class="liebiao-left" />
           <span>{{item.name}}</span>
-          <van-icon name="arrow" />
-
+          <van-icon name="arrow"
+                    class="liebiao-right" />
         </li>
       </ul>
 
@@ -116,7 +116,7 @@ export default {
     }
     .span1 {
       margin-top: 1.875rem;
-      font-size: 0.75rem;
+      font-size: 1rem;
     }
     .span2 {
       margin-bottom: 1.875rem;
@@ -171,8 +171,21 @@ export default {
       background: #fff;
       border-bottom: 1px solid #eee;
       height: 2.25rem;
-      line-height: 2.5rem;
       font-size: 0.75rem;
+      .liebiao-left {
+        float: left;
+        margin-left: 10px;
+        margin-top: 10px;
+      }
+      span {
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .liebiao-right {
+        float: right;
+        margin: 10px;
+      }
     }
   }
   .setup {

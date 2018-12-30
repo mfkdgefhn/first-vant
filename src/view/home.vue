@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <!-- 公告 -->
-    <van-notice-bar text="这个是公告，目前就是一个公告。"
+    <van-notice-bar text="这个是公告，目前就是一个公告。能够滚动的广告，10秒后自动关闭的广告！！！"
                     left-icon="volume-o"
                     v-if="newshow" />
     <!-- 菜单 -->
