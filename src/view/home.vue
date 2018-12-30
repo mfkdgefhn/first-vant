@@ -13,7 +13,8 @@
       <van-tabs class="ment-left">
         <van-tab v-for="nav in navs"
                  :key=nav.id
-                 :title="nav.name">
+                 :title="nav.name"
+                 animated>
         </van-tab>
       </van-tabs>
       <!-- 菜单右 -->

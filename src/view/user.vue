@@ -15,24 +15,16 @@
     </div>
 
     <!-- 菜单 -->
-    <div class="ment"
-         id='ment'
-         ref="reference"
-         :class="searchBarFixed === true ? 'isFixed':''">
-      <!-- 菜单左 -->
-      <van-tabs class="ment-left">
-        <van-tab v-for="nav in navs"
-                 :key=nav.id
-                 :title="nav.name">
-        </van-tab>
-      </van-tabs>
-      <!-- 菜单右 -->
-      <div class="ment-right"
-           @click="bulletMenu">
-        <van-icon name="points"
-                  class="points" />
-      </div>
-    </div>
+    <van-tabbar v-model="active">
+      <van-tabbar-item info="3">
+        <span>自定义</span>
+        <img slot="icon"
+             slot-scope="props"
+             :src="props.active ? icon.active : icon.normal">
+      </van-tabbar-item>
+      <van-tabbar-item icon="search">标签</van-tabbar-item>
+      <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
+    </van-tabbar>
 
     <!-- 列表 -->
     <div class="liebiao">
@@ -51,9 +43,11 @@
       <!-- 设置 -->
       <div class="setup">
         <van-icon class-prefix="iconfont"
-                  name="shezhi" />
+                  name="shezhi"
+                  class="setup-left" />
         <span>设置</span>
-        <van-icon name="arrow" />
+        <van-icon name="arrow"
+                  class="setup-right" />
       </div>
     </div>
   </div>
@@ -64,7 +58,12 @@ export default {
   data () {
     return {
       searchBarFixed: false,
-      name: ''
+      name: '',
+      active: 0,
+      icon: {
+        normal: 'https://img.yzcdn.cn/public_files/2017/10/13/793c77793db8641c4c325b7f25bf130d.png',
+        active: 'https://img.yzcdn.cn/public_files/2017/10/13/793c77793db8641c4c325b7f25bf130d.png'
+      }
     }
   },
   computed: {
@@ -105,7 +104,7 @@ export default {
   // 中
   .header-middle {
     float: left;
-    width: 50%;
+    width: 60%;
     height: 100%;
     span {
       display: block;
@@ -126,37 +125,15 @@ export default {
   // 右
   .header-right {
     float: left;
-    width: 25%;
+    width: 15%;
     height: 100%;
     .van-icon {
       color: #fff;
     }
   }
 }
-// 菜单
-.ment {
-  display: flex;
-
-  .ment-left {
-    flex: 0.9;
-  }
-  .ment-right {
-    flex: 0.1;
-    text-align: center;
-    font-size: 0.875rem;
-    font-weight: 700;
-  }
-}
-.points {
-  line-height: 2.75rem;
-  font-weight: 600;
-}
-.isFixed {
-  position: fixed;
-  background-color: #fff;
-  width: 100%;
-  top: 0;
-  z-index: 999;
+.van-tabbar {
+  position: relative;
 }
 // 列表
 .liebiao {

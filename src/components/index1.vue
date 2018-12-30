@@ -1,66 +1,102 @@
+<template>
+  <div>
+    <!-- 头部 -->
+    <van-nav-bar title="纸鹤视界"
+                 left-text="返回"
+                 right-text="按钮"
+                 left-arrow
+                 @click-left="onClickLeft"
+                 @click-right="onClickRight" />
 
-    <!-- 菜单 -->
-    <div class="ment"
-         id='ment'
-         ref="reference"
-         :class="searchBarFixed === true ? 'isFixed':''">
-      <!-- 菜单左 -->
-      <van-tabs class="ment-left">
-        <van-tab v-for="nav in navs"
-                 :key=nav.id
-                 :title="nav.name">
-        </van-tab>
-      </van-tabs>
-      <!-- 菜单右 -->
-      <div class="ment-right"
-           @click="bulletMenu">
-        <van-icon name="points"
-                  class="points" />
-      </div>
-    </div>
+    <!-- 过渡动画 -->
+    <!-- <transition :name="$store.state.states"> -->
+    <keep-alive>
+      <router-view />
+    </keep-alive>
+    <!-- </transition> -->
 
-    <!-- 搜索 -->
-    <div class="select">
-      <van-search :placeholder="icon"
-                  v-model="value"
-                  background="#fff"
-                  id="select-search"
-                  input-align="center" />
-
-      <div class="search-right"><span>片库</span></div>
-    </div>
-
-    <!-- 幻灯片 -->
-    <van-swipe :autoplay="3000">
-      <van-swipe-item v-for="img in imagesH"
-                      :key="img.id">
-        <img :src="img.name"
-             width="100%">
-      </van-swipe-item>
-    </van-swipe>
-
-    <!-- 影视列表 -->
-    <div class="content">
-      <div v-for="vider in viders"
-           :key="vider.id">
-        <!-- 换行 -->
-        <hr class="separate">
-        <!-- 全网热播 -->
-        <div class="quote">
-          <span>{{vider.title}}</span>
+    <!-- 底部 -->
+    <van-tabbar v-model="active">
+      <van-tabbar-item v-for="item in tabbars"
+                       :key="item.id"
+                       :icon="item.icon"
+                       :to="item.to"
+                       :info="item.info==='0'? '' : item.info">{{item.title}}
+        <div slot="icon">
+          <van-icon class-prefix="iconfont"
+                    :name="item.icon" />
         </div>
-        <ul>
-          <li v-for="item in imagesS"
-              :key="item.id">
-            <img :src="item.img"
-                 style="width:100%;" />
-            <span>
-              {{item.title}}
-            </span>
-            <span class="span-remarks">
-              {{item.remarks}}
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
+      </van-tabbar-item>
+    </van-tabbar>
+
+  </div>
+</template>
+
+<script>
+
+export default {
+  data () {
+    return {
+      activeKey: 0,
+      active: 0
+      // transitionName: 'slide-right' // 默认动态路由变化为slide-right
+    }
+  },
+  methods: {
+    onClickLeft () {
+      alert('返回')
+    },
+    onClickRight () {
+      alert('按钮')
+    },
+    onSearch () {
+      if (this.value === '') {
+        alert('请输入值')
+      } else {
+        alert('你输入了' + this.value)
+      }
+    }
+    // clickLink () {
+    //   this.$store.commit('setTransition', 'turn-on')
+    // }
+  },
+  computed: {
+    // 底部菜单
+    tabbars () {
+      return this.$store.state.tabbars
+    }
+  },
+  // watch: {
+  //   '$route' (to, from) {
+  //     let isBack = this.$router.isBack //  监听路由变化时的状态为前进还是后退
+  //     if (isBack) {
+  //       this.transitionName = 'slide-right'
+  //     } else {
+  //       this.transitionName = 'slide-left'
+  //     }
+  //     this.$router.isBack = false
+  //   }
+  // }
+  watch: {
+
+  },
+  mounted () {
+
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.iconfont {
+  font-size: 1.125rem;
+}
+</style>
+
+<style>
+.Router {
+  position: absolute;
+  width: 100%;
+  transition: all 0.8s ease;
+  top: 2.875rem;
+}
+</style>

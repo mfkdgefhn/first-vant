@@ -6,6 +6,7 @@ import Game from '@/view/game.vue'
 import Novel from '@/view/novel.vue'
 import User from '@/view/user.vue'
 import Home from '@/view/home.vue'
+import Hot from '@/view/home/hot.vue'
 
 Vue.use(Router)
 
@@ -36,7 +37,13 @@ export default new Router({
           component: User
         }, {
           path: 'home',
-          component: Home
+          component: Home,
+          children: [
+            {
+              path: 'hot',
+              component: Hot
+            }
+          ]
         }
       ]
     }
