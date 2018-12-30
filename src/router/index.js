@@ -7,6 +7,7 @@ import Novel from '@/view/novel.vue'
 import User from '@/view/user.vue'
 import Home from '@/view/home.vue'
 import Hot from '@/view/home/hot.vue'
+import Film from '@/view/home/film.vue'
 
 Vue.use(Router)
 
@@ -38,8 +39,18 @@ export default new Router({
         }, {
           path: 'home',
           component: Home,
+          redirect: '/home/hot',
           children: [
             {
+              path: 'hot',
+              component: Hot
+            }, {
+              path: 'film',
+              component: Film
+            }, {
+              path: 'hot',
+              component: Hot
+            }, {
               path: 'hot',
               component: Hot
             }
