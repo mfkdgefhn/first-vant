@@ -13,7 +13,6 @@
         <van-icon name="arrow" />
       </div>
     </div>
-    fsfsd
     <!-- 菜单 -->
     <van-tabbar v-model="active">
       <van-tabbar-item info="3">
