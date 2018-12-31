@@ -15,6 +15,7 @@
         <v-usa-drama v-else-if="active===6"></v-usa-drama>
         <v-variety v-else-if="active===7"></v-variety>
         <v-other v-else></v-other>
+        <!-- {{index}} -->
       </van-tab>
     </van-tabs>
 

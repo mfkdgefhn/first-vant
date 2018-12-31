@@ -8,12 +8,10 @@
                  @click-left="onClickLeft"
                  @click-right="onClickRight" />
 
-    <!-- 过渡动画 -->
-    <!-- <transition :name="$store.state.states"> -->
+    <!-- 内容区 -->
     <keep-alive>
       <router-view />
     </keep-alive>
-    <!-- </transition> -->
 
     <!-- 底部 -->
     <van-tabbar v-model="active">

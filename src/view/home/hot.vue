@@ -19,6 +19,17 @@
       </van-swipe-item>
     </van-swipe>
 
+    <!-- 菜单 -->
+    <div>
+      <ul class="middle-navs">
+        <li v-for="item in navsItem"
+            :key="item.id">
+          {{item.name}}
+        </li>
+      </ul>
+
+    </div>
+
     <!-- 影视列表 -->
     <div class="content">
       <div v-for="vider in viders"
@@ -52,7 +63,8 @@ export default {
   data () {
     return {
       value: '',
-      icon: '\ue604  搜你想看'
+      icon: '\ue604  搜你想看',
+      active: 0
     }
   },
   computed: {
@@ -67,7 +79,11 @@ export default {
     // 影片列表
     imagesS () {
       return this.$store.state.imagesS
+    },
+    navsItem () {
+      return this.$store.state.navsItem
     }
+
   }
 }
 </script>
@@ -133,6 +149,16 @@ export default {
 }
 .van-col {
   border: 0.0625rem solid #000;
+}
+//中间菜单
+.middle-navs {
+  height: 1.25rem;
+  line-height: 1.25rem;
+  background: #fff;
+  li {
+    width: 30%;
+    border: 1px solid #000;
+  }
 }
 // 影片列表
 ul {
