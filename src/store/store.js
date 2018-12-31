@@ -8,14 +8,15 @@ export default new Vuex.Store({
     // 顶部菜单
     navs: [
       { id: 1, name: '推荐', path: '/home/hot', component: '<v-hot></v-hot>' },
-      { id: 2, name: '电影', path: '/home/film', component: '<v-film></v-film>' },
-      { id: 3, name: '动漫', path: '/home/comic', component: '<v-comic></v-comic>' },
+      // { id: 2, name: '电影', path: '/home/film', component: '<v-film></v-film>' },
+      // { id: 3, name: '动漫', path: '/home/comic', component: '<v-comic></v-comic>' },
       { id: 4, name: '国剧', path: '/home/DomesticDrama', component: '<v-domestic-drama></v-domestic-drama>' },
       { id: 5, name: '韩剧', path: '/home/KoreanDrama', component: '<v-koreandrama></v-koreandrama>' },
       { id: 6, name: '日剧', path: '/home/JapaneseDrama', component: '<v-japanese-drama></v-japanese-drama>' },
-      { id: 7, name: '美剧', path: '/home/UsaDrama', component: '<v-usa-drama></v-usa-drama>' },
-      { id: 8, name: '综艺', path: '/home/Variety', component: '<v-variety></v-variety>' },
-      { id: 9, name: '其他', path: '/home/Other', component: '<v-other></v-other>' }],
+      { id: 7, name: '美剧', path: '/home/UsaDrama', component: '<v-usa-drama></v-usa-drama>' }
+      // { id: 8, name: '综艺', path: '/home/Variety', component: '<v-variety></v-variety>' },
+      // { id: 9, name: '其他', path: '/home/Other', component: '<v-other></v-other>' }
+    ],
     // 幻灯片
     imagesH: [{
       id: 1, name: require('../assets/images/h-1.jpg')
@@ -36,23 +37,48 @@ export default new Vuex.Store({
       { id: 2, name: '最萌年龄差CP' },
       { id: 3, name: '人妖情未了' }
     ],
-    // 影片标题
+
+    // 国产主题
     viders: [
-      { id: 1, title: '全网热播' },
-      { id: 2, title: '新鲜网络剧' },
-      { id: 3, title: '国剧正当时' },
-      { id: 4, title: '港台值得追' },
-      { id: 5, title: '私享片单' },
-      { id: 6, title: '国产电影' },
-      { id: 7, title: '国产综艺' },
-      { id: 8, title: '仙侠玄幻' },
-      { id: 9, title: '虐恋情深' },
-      { id: 10, title: '甜蜜互宠' },
-      { id: 11, title: '悬疑推理' },
-      { id: 12, title: '青涩校园' },
-      { id: 13, title: '都市职场' },
-      { id: 14, title: '宫廷斗争' },
-      { id: 15, title: '快意江湖' }
+      {
+        // 国产
+        domesticDramas: [
+          { id: 1, title: '全网热播' },
+          { id: 2, title: '新鲜网络剧' },
+          { id: 3, title: '国剧正当时' },
+          { id: 4, title: '港台值得追' },
+          { id: 5, title: '私享片单' },
+          { id: 6, title: '国产电影' },
+          { id: 7, title: '国产综艺' },
+          { id: 8, title: '仙侠玄幻' },
+          { id: 9, title: '虐恋情深' },
+          { id: 10, title: '甜蜜互宠' },
+          { id: 11, title: '悬疑推理' },
+          { id: 12, title: '青涩校园' },
+          { id: 13, title: '都市职场' },
+          { id: 14, title: '宫廷斗争' },
+          { id: 15, title: '快意江湖' }
+        ]
+      }, {
+        // 韩国主题
+        koreanDramas: [
+          { id: 1, title: '新剧思密达' },
+          { id: 2, title: '本月人气榜' },
+          { id: 3, title: '殿堂级经典' },
+          { id: 4, title: '本周韩星-花样男子李敏镐' },
+          { id: 5, title: '私享片单-韩星门面担当' },
+          { id: 6, title: '韩国电影' },
+          { id: 7, title: '韩国综艺' },
+          { id: 8, title: '花痴偶像在这里' },
+          { id: 9, title: '翘课也要谈恋爱' },
+          { id: 10, title: '编剧大神金恩淑' },
+          { id: 11, title: '颜值高好会撩' },
+          { id: 12, title: '泪目好剧' },
+          { id: 13, title: '青春大爆炸' },
+          { id: 14, title: '温情碎碎念' },
+          { id: 15, title: '都市情感' }
+        ]
+      }
     ],
     // 底部菜单
     tabbars: [

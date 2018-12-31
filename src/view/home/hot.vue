@@ -32,7 +32,7 @@
 
     <!-- 影视列表 -->
     <div class="content">
-      <div v-for="vider in viders"
+      <div v-for="vider in domesticDramas"
            :key="vider.id">
         <!-- 换行 -->
         <hr class="separate">
@@ -73,8 +73,8 @@ export default {
       return this.$store.state.imagesH
     },
     // 影片标题
-    viders () {
-      return this.$store.state.viders
+    domesticDramas () {
+      return this.$store.state.viders[0].domesticDramas
     },
     // 影片列表
     imagesS () {

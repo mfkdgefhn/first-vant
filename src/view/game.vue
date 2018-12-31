@@ -7,14 +7,14 @@
                :key="nav.id"
                :title="nav.name">
         <v-hot v-if="active===0"></v-hot>
-        <v-film v-else-if="active===1"></v-film>
-        <v-comic v-else-if="active===2"></v-comic>
-        <v-domestic-drama v-else-if="active===3"></v-domestic-drama>
-        <v-korean-drama v-else-if="active===4"></v-korean-drama>
-        <v-japanese-drama v-else-if="active===5"></v-japanese-drama>
-        <v-usa-drama v-else-if="active===6"></v-usa-drama>
-        <v-variety v-else-if="active===7"></v-variety>
-        <v-other v-else></v-other>
+        <!-- <v-film v-else-if="active===1"></v-film> -->
+        <!-- <v-comic v-else-if="active===2"></v-comic> -->
+        <v-domestic-drama v-else-if="active===1"></v-domestic-drama>
+        <v-korean-drama v-else-if="active===2"></v-korean-drama>
+        <v-japanese-drama v-else-if="active===3"></v-japanese-drama>
+        <v-usa-drama v-else-if="active===4"></v-usa-drama>
+        <!-- <v-variety v-else-if="active===7"></v-variety> -->
+        <!-- <v-other v-else></v-other> -->
         <!-- {{index}} -->
       </van-tab>
     </van-tabs>
