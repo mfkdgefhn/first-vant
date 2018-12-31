@@ -40,7 +40,7 @@
         <div class="quote">
           <span>{{vider.title}}</span>
         </div>
-        <ul>
+        <ul class="content-ul">
           <li v-for="item in imagesS"
               :key="item.id">
             <img :src="item.img"
@@ -152,36 +152,51 @@ export default {
 }
 //中间菜单
 .middle-navs {
-  height: 1.25rem;
-  line-height: 1.25rem;
+  height: 3rem;
   background: #fff;
+  display: flex;
   li {
-    width: 30%;
-    border: 1px solid #000;
+    flex: 1;
+    margin: 10px 5px;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #000;
+  }
+  li:nth-child(1) {
+    margin-left: 1.25rem;
+  }
+  li:nth-child(3) {
+    margin-right: 1.25rem;
   }
 }
+
 // 影片列表
-ul {
+.content {
+  margin-bottom: 3.125rem;
+}
+.content-ul {
   width: 100%;
   display: flex;
   margin: 0 auto;
   // border: .0625rem solid #000;
-}
-ul li {
-  flex: 0.3333333;
-  margin: 0.3125rem;
-  font-size: 0.75rem;
-  text-align: left;
-}
-.content {
-  margin-bottom: 3.125rem;
-}
-ul li img {
-  border-radius: 0.3125rem;
-  height: 9.9375rem;
-}
-ul li span {
-  display: block;
+  li {
+    flex: 0.3333333;
+    margin: 0.3125rem;
+    font-size: 0.75rem;
+    text-align: left;
+    img {
+      border-radius: 0.3125rem;
+      height: 9.9375rem;
+    }
+    span {
+      display: block;
+    }
+  }
 }
 .span-remarks {
   color: rgba(44, 62, 80, 0.5);
