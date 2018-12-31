@@ -9,16 +9,14 @@
       </van-tab>
     </van-tabs>
 
-    <div class="ment"
-         id='ment'>
-      <!-- 菜单左 -->
-      <van-tabs class="ment-left">
-        <van-tab v-for="nav in navs"
-                 :key=nav.id
-                 :title="nav.name">
-        </van-tab>
-      </van-tabs>
-    </div>
+    <!-- 菜单左 -->
+    <van-tabs class="ment-left"
+              @click="onClick">
+      <van-tab v-for="nav in navs"
+               :key=nav.id
+               :title="nav.name">
+      </van-tab>
+    </van-tabs>
 
   </div>
 </template>
@@ -33,6 +31,11 @@ export default {
   computed: {
     navs () {
       return this.$store.state.navs
+    }
+  },
+  methods: {
+    onClick () {
+      console.log('1')
     }
   }
 }

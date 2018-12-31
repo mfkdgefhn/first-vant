@@ -10,11 +10,14 @@
          ref="reference"
          :class="searchBarFixed === true ? 'isFixed':''">
       <!-- 菜单左 -->
-      <van-tabs class="ment-left">
+      <van-tabs class="ment-left"
+                @click="onClick">
         <van-tab v-for="nav in navs"
                  :key=nav.id
                  :title="nav.name"
-                 animated>
+                 animated
+                 swipeable
+                 sticky>
         </van-tab>
       </van-tabs>
       <!-- 菜单右 -->
@@ -64,6 +67,11 @@ export default {
       } else {
         this.searchBarFixed = false
       }
+    },
+    onClick (index, title) {
+      console.log(index + ' ' + title)
+      let path = this.navs[index].path
+      this.$router.push(path)
     }
   },
   computed: {

@@ -151,17 +151,17 @@ export default {
       font-size: 0.75rem;
       .liebiao-left {
         float: left;
-        margin-left: 10px;
-        margin-top: 10px;
+        margin-left: .625rem;
+        margin-top: .625rem;
       }
       span {
         float: left;
-        margin-top: 10px;
-        margin-left: 10px;
+        margin-top: .625rem;
+        margin-left:.625rem;
       }
       .liebiao-right {
         float: right;
-        margin: 10px;
+        margin: .625rem;
       }
     }
   }

@@ -8,6 +8,13 @@ import User from '@/view/user.vue'
 import Home from '@/view/home.vue'
 import Hot from '@/view/home/hot.vue'
 import Film from '@/view/home/film.vue'
+import Comic from '@/view/home/comic.vue'
+import DomesticDrama from '@/view/home/domesticDrama.vue'
+import KoreanDrama from '@/view/home/KoreanDrama.vue'
+import JapaneseDrama from '@/view/home/JapaneseDrama.vue'
+import UsaDrama from '@/view/home/UsaDrama.vue'
+import Variety from '@/view/home/Variety.vue'
+import Other from '@/view/home/Other.vue'
 
 Vue.use(Router)
 
@@ -47,6 +54,27 @@ export default new Router({
             }, {
               path: 'film',
               component: Film
+            }, {
+              path: 'comic',
+              component: Comic
+            }, {
+              path: 'DomesticDrama',
+              component: DomesticDrama
+            }, {
+              path: 'KoreanDrama',
+              component: KoreanDrama
+            }, {
+              path: 'JapaneseDrama',
+              component: JapaneseDrama
+            }, {
+              path: 'UsaDrama',
+              component: UsaDrama
+            }, {
+              path: 'Variety',
+              component: Variety
+            }, {
+              path: 'Other',
+              component: Other
             }
           ]
         }

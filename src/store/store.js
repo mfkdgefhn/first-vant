@@ -7,15 +7,15 @@ export default new Vuex.Store({
   state: {
     // 顶部菜单
     navs: [
-      { id: 1, name: '推荐' },
-      { id: 2, name: '电影' },
-      { id: 3, name: '动漫' },
-      { id: 4, name: '国剧' },
-      { id: 5, name: '韩剧' },
-      { id: 6, name: '日剧' },
-      { id: 7, name: '美剧' },
-      { id: 8, name: '综艺' },
-      { id: 9, name: '其他' }],
+      { id: 1, name: '推荐', path: '/home/hot' },
+      { id: 2, name: '电影', path: '/home/film' },
+      { id: 3, name: '动漫', path: '/home/comic' },
+      { id: 4, name: '国剧', path: '/home/DomesticDrama' },
+      { id: 5, name: '韩剧', path: '/home/KoreanDrama' },
+      { id: 6, name: '日剧', path: '/home/JapaneseDrama' },
+      { id: 7, name: '美剧', path: '/home/UsaDrama' },
+      { id: 8, name: '综艺', path: '/home/Variety' },
+      { id: 9, name: '其他', path: '/home/Other' }],
     // 幻灯片
     imagesH: [{
       id: 1, name: require('../assets/images/h-1.jpg')
@@ -66,6 +66,12 @@ export default new Vuex.Store({
       { id: 4, icon: 'falvshengming', name: '免责声明', iconright: 'arrow' }
     ],
     states: 'turn-on'
+  },
+  getters: {
+
+    getNavs (state) {
+      return state.navs
+    }
   },
   mutations: {
 
