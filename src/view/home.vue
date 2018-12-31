@@ -11,13 +11,14 @@
          :class="searchBarFixed === true ? 'isFixed':''">
       <!-- 菜单左 -->
       <van-tabs class="ment-left"
-                @click="onClick">
+                @click="onClick"
+                animated
+                swipeable
+                sticky>
         <van-tab v-for="nav in navs"
                  :key=nav.id
-                 :title="nav.name"
-                 animated
-                 swipeable
-                 sticky>
+                 :title="nav.name">
+
         </van-tab>
       </van-tabs>
       <!-- 菜单右 -->
@@ -29,7 +30,6 @@
     </div>
 
     <router-view></router-view>
-
   </div>
 </template>
 
