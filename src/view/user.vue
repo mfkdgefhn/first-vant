@@ -13,7 +13,7 @@
         <van-icon name="arrow" />
       </div>
     </div>
-
+    fsfsd
     <!-- 菜单 -->
     <van-tabbar v-model="active">
       <van-tabbar-item info="3">
@@ -151,17 +151,17 @@ export default {
       font-size: 0.75rem;
       .liebiao-left {
         float: left;
-        margin-left: .625rem;
-        margin-top: .625rem;
+        margin-left: 0.625rem;
+        margin-top: 0.625rem;
       }
       span {
         float: left;
-        margin-top: .625rem;
-        margin-left:.625rem;
+        margin-top: 0.625rem;
+        margin-left: 0.625rem;
       }
       .liebiao-right {
         float: right;
-        margin: .625rem;
+        margin: 0.625rem;
       }
     }
   }
