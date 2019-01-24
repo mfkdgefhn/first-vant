@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store/store'
+import Mui from 'vue-awesome-mui'
+
 // import '../config/rem'
 
 // import './common/px2rem'
@@ -17,6 +19,7 @@ import 'vant/lib/index.css'
 import './assets/iconfont/iconfont.css'
 
 Vue.use(Vant)
+Vue.use(Mui)
 
 Vue.config.productionTip = false
 

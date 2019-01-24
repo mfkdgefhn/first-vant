@@ -11,6 +11,39 @@
     // 动态设置 html font-size值
     document.getElementsByTagName('html')[0].style.fontSize = devicewidth / 22.5 + 'px'
 
+
+    //Toast 这些都是在网上粘的别人的。但是找不到出处了，大佬见谅。
+    function Toast(msg, duration) {
+      duration = isNaN(duration) ? 3000 : duration;
+      var m = document.createElement('div');
+      m.innerHTML = msg;
+      m.style.cssText = "width: 60%;min-width: 150px;opacity: 0.7;height: 30px;color: rgb(255, 255, 255);line-height: 30px;text-align: center;border-radius: 5px;position: fixed;bottom: 70px;left: 20%;z-index: 999999;background: rgb(0, 0, 0);font-size: 12px;";
+      document.body.appendChild(m);
+      setTimeout(function () {
+        var d = 0.5;
+        m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
+        m.style.opacity = '0';
+        setTimeout(function () { document.body.removeChild(m) }, d * 1000);
+      }, duration);
+    }
+    var time = ''  // 用来存上一次按键时间；
+    setTimeout(() => {
+      // 监听返回按钮
+      document.addEventListener('backbutton', function (evt) {
+        var url = location.hash.split('/')[1];
+        if (url === 'home') {// 处于app首页,满足退出app操作
+          if (new Date() - time < 2000) {// 小于2s,退出程序
+            navigator.app.exitApp();
+          } else {   // 大于2s，重置时间戳，
+            time = new Date();
+            Toast('再次点击退出', 2000);
+          }
+          return;
+        } else {
+          history.back();  // 不满足退出操作，，返回上一页
+        }
+      }, false);
+    }, 10)
   </script>
 </head>
 
